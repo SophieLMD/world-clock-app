@@ -20,6 +20,26 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small]"
     );
   }
+  let bogotaElement = document.querySelector("#bogota");
+  if (bogotaElement) {
+    let bogotaDateElement = bogotaElement.querySelector(".date");
+    let bogotaTimeElement = bogotaElement.querySelector(".time");
+    let bogotaTime = moment().tz("America/Bogota");
+    bogotaDateElement.innerHTML = bogotaTime.format("MMMM Do YYYY");
+    bogotaTimeElement.innerHTML = bogotaTime.format(
+      "h:mm:ss [<small>]A[</small]"
+    );
+  }
+  let berlinElement = document.querySelector("#berlin");
+  if (berlinElement) {
+    let berlinDateElement = berlinElement.querySelector(".date");
+    let berlinTimeElement = berlinElement.querySelector(".time");
+    let berlinTime = moment().tz("Europe/Berlin");
+    berlinDateElement.innerHTML = berlinTime.format("MMMM Do YYYY");
+    berlinTimeElement.innerHTML = berlinTime.format(
+      "h:mm:ss [<small>]A[</small]"
+    );
+  }
 }
 function updateCity(event) {
   let cityTimeZone = event.target.value;
@@ -37,7 +57,7 @@ function updateCity(event) {
           <div class="time">${cityTime.format(
             "h:mm:ss"
           )} <small>${cityTime.format("A")}</small></div>
-          </div>`;
+          </div> <a href="/"> Return to homepage</a>`;
 }
 updateTime();
 setInterval(updateTime, 1000);
