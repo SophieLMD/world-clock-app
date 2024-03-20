@@ -5,6 +5,9 @@ body {
 h1 {
   text-align: center;
   font-size: 45px;
+  color: #272343;
+  font-family: "Michroma", sans-serif;
+  font-weight: 600;
 }
 h2 {
   margin: 0 0 10px;
@@ -20,9 +23,12 @@ select {
   color: rgba(0, 0, 0, 0.6);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+a {
+  color: #272343;
+}
 .container {
   max-width: 600px;
-  margin: 60px auto;
+  margin: 40px auto;
   background: #ffffff;
   padding: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
